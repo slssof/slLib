@@ -21,7 +21,7 @@ func (rng *RNG) Init(seed uint32) {
 	}
 }
 
-func (rng *RNG) NextInt() uint32 {
+func (rng *RNG)  NextInt() uint32 {
 	rng.state = (rng.a*rng.state + rng.c) % rng.m
 	return rng.state
 }
